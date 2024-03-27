@@ -16,22 +16,22 @@ public class Main {
         assertArrayEquals(expected, answer);
     }
 
-    public static boolean positiveNumbersWithAnswersAtTheEnds() {
+    public static void positiveNumbersWithAnswersAtTheEnds() {
         int[] numbers = new int[]{1,5,24};
         int target = 25;
         int[] expected = new int[]{1,3};
 
         int[] answer = twoSum(numbers, target);
-        return Arrays.equals(expected, answer);
+        assertArrayEquals(expected, answer);
     }
 
-    public static boolean negativeNumbersWithAnswersInMiddleAndEnd() {
+    public static void negativeNumbersWithAnswersInMiddleAndEnd() {
         int[] numbers = new int[]{-1000,0,1,5,24};
         int target = 25;
         int[] expected = new int[]{3,5};
 
         int[] answer = twoSum(numbers, target);
-        return Arrays.equals(expected, answer);
+        assertArrayEquals(expected, answer);
     }
 
     /** Two sum sorted **/
