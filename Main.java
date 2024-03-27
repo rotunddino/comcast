@@ -10,7 +10,7 @@ public class Main {
     public static void positiveNumbersWithAnswersInTheMiddle() {
         int[] numbers = new int[]{3,5,12,16};
         int target = 17;
-        int[] expected = new int[]{1,2};
+        int[] expected = new int[]{2,3};
 
         int[] answer = twoSum(numbers, target);
         assertArrayEquals(expected, answer);
@@ -19,7 +19,7 @@ public class Main {
     public static boolean positiveNumbersWithAnswersAtTheEnds() {
         int[] numbers = new int[]{1,5,24};
         int target = 25;
-        int[] expected = new int[]{0,2};
+        int[] expected = new int[]{1,3};
 
         int[] answer = twoSum(numbers, target);
         return Arrays.equals(expected, answer);
@@ -28,7 +28,7 @@ public class Main {
     public static boolean negativeNumbersWithAnswersInMiddleAndEnd() {
         int[] numbers = new int[]{-1000,0,1,5,24};
         int target = 25;
-        int[] expected = new int[]{2,4};
+        int[] expected = new int[]{3,5};
 
         int[] answer = twoSum(numbers, target);
         return Arrays.equals(expected, answer);
@@ -55,6 +55,6 @@ public class Main {
             }
         }
 
-        return new int[]{left, right};
+        return new int[]{left + 1, right + 1}; // +1 to accommodate for 1 indexed array
     }
 }
